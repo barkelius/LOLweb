@@ -1,0 +1,38 @@
+body
+{
+    background-color:#f1efec;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    margin: 0;
+}
+input[type="text"]
+{
+    width: 400px;
+    display:block;
+    margin-bottom:10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    background-color: #f1efec;
+}
+.header
+{
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    background-image:url('http://www.almostfreebeats.com/wp-content/uploads/2011/10/black-banner-bottom-1600-x-430-1024x275.jpg');
+}
+
+.rubrikStyle, .summonerNameStyle
+{
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    text-align: center;
+    padding: 10px;
+    color: #f1efec;
+}
+.summonerNameStyle
+{
+    color: #000000;
+    text-align: left;
+    padding: 10px 0;
+}
