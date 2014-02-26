@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!DOCTYPE HTML>
+    <!-- page info -->
+    <title>LOLweb</title>
+    <link rel="shortcut icon" href="http://cdn.leagueoflegends.com/lolkit/1.1.5/resources/images/favicon.ico">
+<!-- scripts -->
+    <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="myscript2.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="bootstrap-3.1.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-3.1.1-dist/css/bootstrap-theme.css">
+    <link href="bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="rankedteam.css">
+    <!-- Bootstrap -->
+
+
+
+
+
+
+</head>
+
+
+<body style="">
+<div id="container">
+    <div class="header">
+        <div class="rubrikStyle">Type summoner name</div>
+        <form onsubmit="getSummonerInfo()">
+            <input type="text" name="summonerName" placeholder="Summonername..."><br>
+        </form>
+
+        <p style="margin: 0 auto; padding: 0; width: 145px; margin-top: -15px; padding-bottom: 5px;">
+            <button type="button" style="margin-left: auto; margin-right: auto;" onclick="setServer('euw')" class="btn btn-default btn-sm">EUW</button>
+            <button type="button" style="margin-left: auto; margin-right: auto;" onclick="setServer('eune')" class="btn btn-default btn-sm">EUNE</button>
+            <button type="button" style="margin-left: auto; margin-right: auto;" onclick="setServer('na')" class="btn btn-default btn-sm">NA</button>
+        </p>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <!-- Left Header Stats -->
+    <ul class="playerTopSummaryUlLeft">
+        <li class="featured">
+
+            <div class="playerTopSummaryText">Solo 5v5</div>
+
+            <div id="playerTopSummaryRankingImage"></div>
+
+            <div class="playerTopSummaryRankingText" id="playerTopSummaryRankingText"></div>
+            <div class="playerTopSummaryLeaguePoints" id="playerTopSummaryLeaguePoints"></div>
+
+            <div class="playerTopSummaryWins" id="playerTopSummaryWins"></div>
+            <div class="playerTopSummaryLosses" id="playerTopSummaryLosses"></div>
+
+        </li>
+    </ul>
+    <!-- Right Header Champion Stats -->
+    <ul class="playerTopSummaryUlRight">
+        <li class="featured">
+
+            <div class="playerTopSummaryText">Most Played</div>
+
+            <div id="playerTopRightChampionImage"></div>
+
+            <div class="playerTopSummaryRankingText" id="playerTopRightChampionName"></div>
+            <div class="playerTopSummaryLeaguePoints" id="playerTopRightKDA"></div>
+
+            <div class="playerTopSummaryWins" id="playerTopRightChampionWins"></div>
+            <div class="playerTopSummaryLosses" id="playerTopRightChampionLosses"></div>
+
+        </li>
+    </ul>
+
+    <script>
+        initServer();
+        for(var i = 0; i < 10; ++i){
+
+            document.write('<div class="panel-group" id="accordion" style="width: 900px; margin-left: auto; margin-right: auto; margin-bottom: 0;"><div class="panel panel-default" style="border-radius: 0; border: 0;"><div class="panel-heading" style="padding: 0;"><h4 class="panel-title" style="border: 0"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + i + '" style="text-decoration:none"><div class="matchHistoryContent" id="matchHistory' + i + '"></div></a></h4></div><div id="collapse' + i + '" class="panel-collapse collapse"><div class="panel-body" style="border: 0px; padding: 0px;"><div id="matchHistoryExtended' + i + '" class="matchHistoryExtended"></div></div></div></div></div>');
+        }
+    </script>
+
+
+
+
+    <br><br>
+
+
+    <!-- Footer, not sticking to bottom
+        <footer>-->
+    <p style="text-align: center"><br>This product is not endorsed, certified or otherwise approved in any way by Riot Games, Inc. or any of its affiliates.</p>
+    <p style="text-align: center">By Axel Barkelius</p>
+    <div id="summonerIdToShowMe" style="text-align: center;"></div>
+    <br>
+    <!--  </footer>-->
+
+</div>
+</body>
+</html>
+
+

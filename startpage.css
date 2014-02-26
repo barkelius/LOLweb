@@ -1,0 +1,315 @@
+body
+{
+    background-color:#f1efec;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    margin: 0;
+}
+input[type="text"]
+{
+    width: 400px;
+    display:block;
+    margin-bottom:10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    background-color: #f1efec;
+}
+.header
+{
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    background-image:url('http://www.almostfreebeats.com/wp-content/uploads/2011/10/black-banner-bottom-1600-x-430-1024x275.jpg');
+}
+.rubrikStyle, .summonerNameStyle
+{
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    font-size: 30px;
+    font-style: normal;
+    text-align: center;
+    padding: 10px;
+    color: #f1efec;
+}
+.summonerNameStyle
+{
+    color: #000000;
+    text-align: left;
+    padding: 10px 0;
+}
+.playerTopSummaryWins, .playerTopSummaryLosses
+{
+    text-align: center;
+    display: table-cell;
+    padding: 0 37px;
+    font-size: 22px;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    color: mediumseagreen;
+}
+.playerTopSummaryLosses
+{
+    color: #FF5555;
+}
+.playerTopSummaryImage
+{
+    display: table-cell;
+    float: right;
+}
+.playerTopSummaryText, .playerTopSummaryLeaguePoints, .playerTopSummaryRankingText{
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    color: #f1efec;
+    text-align: center;
+}
+.playerTopSummaryText, .playerTopSummaryRankingText
+{
+    font-size: 20px;
+}
+img.playerTopSummaryRankingImage
+{
+    margin-top: -20px;
+    margin-bottom: -20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.statDisplay
+{
+    max-width: 900px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    line-height: 28px;
+}
+.headerStats
+{
+    width: 900px;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    border:2px solid black;
+    background-color: lightgray;
+    overflow:hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+li.featured {
+    background-color: #292929;
+    width: 200px;
+    float: right;
+    background-image: url('http://www.almostfreebeats.com/wp-content/uploads/2011/10/black-banner-bottom-1600-x-430-1024x275.jpg');
+}
+ul.playerTopSummaryUlLeft, ul.playerTopSummaryUlRight
+{
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+    -webkit-padding-start: 0px;
+    list-style-type: none;
+    margin: 0;
+}
+
+ul.playerTopSummaryUlLeft
+{
+    float: left;
+    margin-left: 14%;
+}
+ul.playerTopSummaryUlRight
+{
+    float: right;
+    margin-right: 14%;
+}
+
+img.playerTopRightImage
+{
+    margin-top: 10px;
+    margin-bottom: 0;
+    border-radius: 8px;
+    box-shadow: 0 0 5px #000;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+/* matchHistory*/
+.matchHistoryContent
+{
+    width: 900px;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+   /* border:2px solid black;*/
+    background-color:mediumseagreen;
+    margin-left: auto;
+    margin-right: auto;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    border-right: 3px solid black;
+}
+.matchHistoryTimePlayed, .matchHistoryGameMode, .matchHistoryImage, .matchHistoryKDA, .matchHistoryCreapScore
+{
+    padding: 5px 10px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+    white-space: nowrap;
+    width: 70px;
+}
+.matchHistoryKDA
+{
+    width: 90px;
+}
+.matchHistoryTimePlayed, .matchHistoryCreapScore
+{
+    width: 80px;
+}
+
+.matchHistoryGameMode
+{
+    width: 130px;
+}
+.matchHistoryItemStyle
+{
+    padding: 5px 0;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+    white-space: nowrap;
+    width: 40px;
+}
+.matchHistorySummonersStyle
+{
+    padding: 5px 5px;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 14px;
+    white-space: nowrap;
+    width: 70px;
+}
+
+.matchHistoryExtended
+{
+    display: block;
+    border-right: 3px solid black;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    /*background-color: mediumseagreen;*/
+    color: #ffffff;
+    padding: 10px;
+    background-image: url('http://www.almostfreebeats.com/wp-content/uploads/2011/10/black-banner-bottom-1600-x-430-1024x275.jpg');
+}
+.fellowPlayersFriendly
+{
+    display: block;
+    background-color: rgba(0,191,255,0.67);
+    padding: 5px;
+    border-radius: 3px;
+}
+.fellowPlayersEnemy
+{
+    display: block;
+    background-color: rgba(155,0,139,0.5);
+    padding: 5px;
+    border-radius: 3px;
+}
+.matchHistoryExtendedfellowPlayers
+{
+    display: block;
+    float: right;
+    text-align: center;
+}
+.matchHistoryExtendedStats
+{
+    display: block;
+}
+
+
+/* images*/
+img.matchHistoryChampionImage
+{
+    width: 64px;
+    height: 64px;
+    background-size: 72px !important;
+    background-position: center center !important;
+    border-radius: 8px;
+    box-shadow: 0 0 2px #000;
+    border: 1px solid #111;
+}
+img.matchHistorySummoners
+{
+    width: 64px;
+    height: 64px;
+    background-size: 72px !important;
+    background-position: center center !important;
+    border-radius: 4px;
+    box-shadow: 0 0 2px #000;
+    border: 1px solid #111;
+}
+img.matchHistoryMoreStatsButton
+{
+    width: 64px;
+    height: 64px;
+    background-size: 72px !important;
+    background-position: center center !important;
+    border-radius: 4px;
+}
+img.matchHistoryItem
+{
+    width: 32px;
+    height: 32px;
+    background-size: 36px !important;
+    background-position: center center !important;
+    border-radius: 4px;
+    box-shadow: 0 0 2px #000;
+    border: 1px solid #111;
+}
+img.matchHistoryExtendedChampion
+{
+    width: 48px;
+    height: 48px;
+    background-size: 54px !important;
+    background-position: center center !important;
+    border-radius: 4px;
+    box-shadow: 0 0 2px #000;
+    border: 1px solid #111;
+    margin: 0 3px;
+}
+
+/* Footer*/
+footer
+{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #f1efec;
+    background-image: url('http://www.almostfreebeats.com/wp-content/uploads/2011/10/black-banner-bottom-1600-x-430-1024x275.jpg');
+}
+
+
+h4,h5
+{
+    margin: 0;
+    border-bottom: solid 1px #f1efec;
+    font-weight: normal;
+    font-size: 20px;
+    color: #f1efec;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+}
+h5{
+    text-align: right;
+}
+
+
+
+#container {
+    position: relative;
+    min-height: 100%;
+    voice-family: "\"}\"";
+    voice-family: inherit;
+    height: auto;
+}
+html>body #container {
+    height: auto;
+}
+
