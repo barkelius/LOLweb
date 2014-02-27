@@ -9,6 +9,18 @@
     <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.7.1.min.js"></script>
     <script type="text/javascript" src="rankedteamprofile.js"></script>
+
+<!-- script for chartsJS-->
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="chartsjs/Lib/js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="chartsjs/Lib/js/globalize.min.js"></script>
+    <script type="text/javascript" src="ChartsJS/Lib/js/dx.chartjs.js"></script>
+    <script type="text/javascript" src="ChartsJS/Lib/js/knockout-3.0.0.js"></script>
+    <script type="text/javascript" src="ChartsJS/Lib/js/angular.min.js"></script>
+<!-- end script for chartsJS-->
+
+
+
     <!-- css -->
     <link rel="stylesheet" href="bootstrap-3.1.1-dist/css/bootstrap.css">
     <link rel="stylesheet" href="bootstrap-3.1.1-dist/css/bootstrap-theme.css">
@@ -40,10 +52,54 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
     <!-- Left Header Stats -->
+    <script>
+        for(var i = 0; i < 5; ++i){
+            document.write('<div class="panel-group" id="accordion" style="width: 900px; margin-left: auto; margin-right: auto; margin-bottom: 0;"><div class="panel panel-default" style="border-radius: 0; border: 0;"><div class="panel-heading" style="padding: 0;"><h4 class="panel-title" style="border: 0"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + i + '" style="text-decoration:none"><div class="rankedTeamContent" id="rankedTeam' + i + '"></div></a></h4></div><div id="collapse' + i + '" class="panel-collapse collapse"><div class="panel-body" style="border: 0; padding: 0;"><div id="rankedTeamExtended' + i + '" class="rankedTeamExtended"></div></div></div></div></div>');
+        }
+    </script>
+  <!--  <script>
+        for(var i = 0; i < 5; ++i){
+            document.write('<div class="panel-group" id="accordion" style="width: 900px; margin-left: auto; margin-right: auto; margin-bottom: 0;"><div class="panel panel-default" style="border-radius: 0; border: 0;"><div class="panel-heading" style="padding: 0;"><h4 class="panel-title" style="border: 0"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + i + '" style="text-decoration:none"><div class="rankedTeamContent" id="rankedTeam' + i + '"></div></a></h4></div><div id="collapse' + i + '" class="panel-collapse collapse"><div class="panel-body" style="border: 0; padding: 0;"><div id="rankedTeamExtended' + i + '" class="rankedTeamExtended"></div></div></div></div></div>');
+        }
 
+        var dataSource = [
+            {champion: "Lee Sin", val: 3},
+            {champion: "Elise", val: 5},
+            {champion: "Wukong", val: 1},
+            {champion: "Lucian", val: 1}
+        ];
+
+        $("#chartContainer").dxPieChart({
+            dataSource: dataSource,
+            title: "Last 10 Champions Played",
+            tooltip: {
+                enabled: true,
+                customizeText: function() {
+                    return this.valueText;
+                }
+            },
+            legend: {
+                horizontalAlignment: "right",
+                verticalAlignment: "top",
+                margin: 0,
+                visible: false
+            },
+            series: [{
+                type: "doughnut",
+                argumentField: "champion",
+                label: {
+                    connector: {
+                        visible: true
+                    }
+                }
+            }]
+        });
+    </script>
+-->
     <br><br>
-
-
+    <!-- chart
+    <div id="chartContainer" style="max-width:700px;height: 300px;"></div>
+    <--
     <!-- Footer, not sticking to bottom
         <footer>-->
     <p style="text-align: center"><br>This product is not endorsed, certified or otherwise approved in any way by Riot Games, Inc. or any of its affiliates.</p>

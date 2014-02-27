@@ -5,13 +5,18 @@ $(function getRankedTeamInfo() {
         dataType: 'json',
         success: function(data) {
             var id = data.id;
-            //alert("id = '" + id + "'");
             document.getElementById('summonerIdToShowMe').innerHTML = id;
             $.ajax({
                 url: 'https://prod.api.pvp.net/api/lol/euw/v2.2/team/by-summoner/' + id + '?api_key=818fcfce-3cb5-49eb-a38d-8ee45d6e3e76',
                 dataType: 'json',
                 success: function(data) {
-                    alert(data[0].tag);
+                    for(var i = 0; i < data.length; ++i){
+                        document.getElementById('rankedTeam' + i).innerHTML = "<div class='rankedTeamName'>[" + data[i].tag + "] " + data[i].name + "</div>" +
+                                                                              "<div class='rankedTeamWins'>" + data[i].teamStatSummary.teamStatDetails[0].wins + "</div> " +
+                                                                              "<div class='rankedTeamLosses'>" + data[i].teamStatSummary.teamStatDetails[0].losses + "</div> ";
+                        document.getElementById('rankedTeamExtended' + i).innerHTML = "swag";
+                    }
+
 
                 },
                 statusCode: {
