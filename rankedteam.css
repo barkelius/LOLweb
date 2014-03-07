@@ -84,3 +84,31 @@ input[type="text"]
     padding: 10px;
     background-image: url('http://www.almostfreebeats.com/wp-content/uploads/2011/10/black-banner-bottom-1600-x-430-1024x275.jpg');
 }
+
+.splitLeft, .splitRight {
+    position: relative;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: #565656;
+    background-color: #ffffff;
+    border: 1px solid #cfcfcf;
+    border-radius: 3px;
+    box-shadow: 0px 1px 3px 0px rgba(112,112,112,0.05);
+    text-align: center;
+    height: 440px;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    float: left;
+    width: 430px;
+}
+.splitRight {
+    float: right;
+    margin-right: 75px;
+}
+
+.splitContent{
+    position: relative;
+    width: 950px;
+    margin: 0 auto;
+}

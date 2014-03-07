@@ -11,12 +11,13 @@ $(function getRankedTeamInfo() {
                 dataType: 'json',
                 success: function(data) {
                     for(var i = 0; i < data.length; ++i){
+                        var splitLeftinfo = "swag";
+                        var splitRightinfo = "swag2";
                         document.getElementById('rankedTeam' + i).innerHTML = "<div class='rankedTeamName'>[" + data[i].tag + "] " + data[i].name + "</div>" +
                                                                               "<div class='rankedTeamWins'>" + data[i].teamStatSummary.teamStatDetails[0].wins + "</div> " +
                                                                               "<div class='rankedTeamLosses'>" + data[i].teamStatSummary.teamStatDetails[0].losses + "</div> ";
-                        document.getElementById('rankedTeamExtended' + i).innerHTML = "swag";
+                        document.getElementById('rankedTeamExtended' + i).innerHTML = "<div class='splitContent'><div class='splitLeft'>" + splitLeftinfo + "</div><div class='splitRight'>" + splitRightinfo + "</div></div>";
                     }
-
 
                 },
                 statusCode: {

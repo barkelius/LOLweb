@@ -54,52 +54,12 @@
     <!-- Left Header Stats -->
     <script>
         for(var i = 0; i < 5; ++i){
-            document.write('<div class="panel-group" id="accordion" style="width: 900px; margin-left: auto; margin-right: auto; margin-bottom: 0;"><div class="panel panel-default" style="border-radius: 0; border: 0;"><div class="panel-heading" style="padding: 0;"><h4 class="panel-title" style="border: 0"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + i + '" style="text-decoration:none"><div class="rankedTeamContent" id="rankedTeam' + i + '"></div></a></h4></div><div id="collapse' + i + '" class="panel-collapse collapse"><div class="panel-body" style="border: 0; padding: 0;"><div id="rankedTeamExtended' + i + '" class="rankedTeamExtended"></div></div></div></div></div>');
+            document.write('<div class="panel-group" id="accordion" style="width: 900px; margin-left: auto; margin-right: auto; margin-bottom: 0;"><div class="panel panel-default" style="border-radius: 0; border: 0;"><div class="panel-heading" style="padding: 0;"><h4 class="panel-title" style="border: 0"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + i + '" style="text-decoration:none"><div class="rankedTeamContent" id="rankedTeam' + i + '"></div></a></h4></div><div id="collapse' + i + '" class="panel-collapse collapse"><div class="panel-body" style="border: 0; padding: 0; background-image: url(' + 'http://www.almostfreebeats.com/wp-content/uploads/2011/10/black-banner-bottom-1600-x-430-1024x275.jpg' + ');"><div id="rankedTeamExtended' + i + '" class="rankedTeamExtended"></div></div></div></div></div>');
         }
     </script>
-  <!--  <script>
-        for(var i = 0; i < 5; ++i){
-            document.write('<div class="panel-group" id="accordion" style="width: 900px; margin-left: auto; margin-right: auto; margin-bottom: 0;"><div class="panel panel-default" style="border-radius: 0; border: 0;"><div class="panel-heading" style="padding: 0;"><h4 class="panel-title" style="border: 0"><a data-toggle="collapse" data-parent="#accordion" href="#collapse' + i + '" style="text-decoration:none"><div class="rankedTeamContent" id="rankedTeam' + i + '"></div></a></h4></div><div id="collapse' + i + '" class="panel-collapse collapse"><div class="panel-body" style="border: 0; padding: 0;"><div id="rankedTeamExtended' + i + '" class="rankedTeamExtended"></div></div></div></div></div>');
-        }
 
-        var dataSource = [
-            {champion: "Lee Sin", val: 3},
-            {champion: "Elise", val: 5},
-            {champion: "Wukong", val: 1},
-            {champion: "Lucian", val: 1}
-        ];
-
-        $("#chartContainer").dxPieChart({
-            dataSource: dataSource,
-            title: "Last 10 Champions Played",
-            tooltip: {
-                enabled: true,
-                customizeText: function() {
-                    return this.valueText;
-                }
-            },
-            legend: {
-                horizontalAlignment: "right",
-                verticalAlignment: "top",
-                margin: 0,
-                visible: false
-            },
-            series: [{
-                type: "doughnut",
-                argumentField: "champion",
-                label: {
-                    connector: {
-                        visible: true
-                    }
-                }
-            }]
-        });
-    </script>
--->
     <br><br>
-    <!-- chart
-    <div id="chartContainer" style="max-width:700px;height: 300px;"></div>
-    <--
+
     <!-- Footer, not sticking to bottom
         <footer>-->
     <p style="text-align: center"><br>This product is not endorsed, certified or otherwise approved in any way by Riot Games, Inc. or any of its affiliates.</p>

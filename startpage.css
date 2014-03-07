@@ -286,6 +286,11 @@ footer
     background-image: url('http://www.almostfreebeats.com/wp-content/uploads/2011/10/black-banner-bottom-1600-x-430-1024x275.jpg');
 }
 
+.footer-content
+{
+    padding: 55px 0px 25px;
+    margin: 0 14%;
+}
 
 h4,h5
 {
@@ -313,3 +318,12 @@ html>body #container {
     height: auto;
 }
 
+hr {
+    display: block;
+    -webkit-margin-before: 0.5em;
+    -webkit-margin-after: 0.5em;
+    -webkit-margin-start: auto;
+    -webkit-margin-end: auto;
+    border-style: inset;
+    border-width: 1px;
+}
