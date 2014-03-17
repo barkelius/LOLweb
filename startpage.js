@@ -197,16 +197,16 @@ function extendedMatchHistory(stats, fellowPlayers, myTeamId, myChampionId){
 
     for(var i = 0; i < fellowPlayers.length; ++i){
         if(fellowPlayers[i].teamId == 100)
-            teamBlue += "<img class='matchHistoryExtendedChampion'  src='championImages/" + fellowPlayers[i].championId + ".png'>";
+            teamBlue += "<a href='champion.html#" + fellowPlayers[i].championId + "'><img class='matchHistoryExtendedChampion'  src='championImages/" + fellowPlayers[i].championId + ".png'></a>";
             //teamBlue += fellowPlayers[i].championId + ", ";
         else if(fellowPlayers[i].teamId == 200)
-            teamPurple += "<img class='matchHistoryExtendedChampion'  src='championImages/" + fellowPlayers[i].championId + ".png'>";
+            teamPurple += "<a href='champion.html#" + fellowPlayers[i].championId + "'><img class='matchHistoryExtendedChampion'  src='championImages/" + fellowPlayers[i].championId + ".png'></a>";
             //teamPurple += fellowPlayers[i].championId + ", ";
     }
     if(myTeamId == 100)
-        teamBlue += "<img class='matchHistoryExtendedChampion'  src='championImages/" + myChampionId + ".png'>";
+        teamBlue += "<a href='champion.html#" + myChampionId + "' ><img class='matchHistoryExtendedChampion'  src='championImages/" + myChampionId + ".png'></a>";
     else if(myTeamId == 200)
-        teamPurple += "<img class='matchHistoryExtendedChampion'  src='championImages/" + myChampionId + ".png'>";
+        teamPurple += "<a href='champion.html#" + myChampionId + "' ><img class='matchHistoryExtendedChampion'  src='championImages/" + myChampionId + ".png'></a>";
     var goldEarned = isUndefined(stats.goldEarned);
     var damageDealt = isUndefined(stats.totalDamageDealtToChampions);
     var damageTaken = isUndefined(stats.totalDamageTaken);
@@ -235,14 +235,6 @@ function isUndefined(number){
     return number;
 }
 
-/*
- <th></th>
- <td><img src='statsIcons/shield.png'></td>
- <td><img src='statsIcons/skulls.png'></td>
- <td><img src='statsIcons/ward.png'></td>
- <td><img src='statsIcons/turret.png'></td>
- <td><img src='statsIcons/sword.png'></td>
- */
 //https://prod.api.pvp.net/api/lol/' + window.summonerServer + '/v2.3/league/by-summoner/23672758/entry?api_key=818fcfce-3cb5-49eb-a38d-8ee45d6e3e76
 
 function matchHistoryGameMode(matchMode){
@@ -309,4 +301,44 @@ function matchHistoryGamescore(kills, deaths, assists){
     return (kills + "/" + deaths + "/" + assists);
 }
 
+/*
+var pieChartDataSource = [
+                {champion: 'Lee Sin', value: 3},
+                {champion: 'Elise', value: 4},
+                {champion: 'Wukong', value: 2},
+                {champion: 'Lucian', value: 1}
+];
 
+pieChartDataSource.push({champion: "Swagmo", value: 5});
+pieChartDataSource.push({champion: "Chill stuffs", value: 2});
+
+
+$(function () {
+    $("#pieChartContainer").dxPieChart({
+        dataSource: pieChartDataSource,
+        series: {
+            type: "doughnut",
+            argumentField: 'champion',
+            valueField: 'value'
+        },
+tooltip: {
+    enabled: true,
+    customizeText: function () {
+    return this.argumentText + ": " + this.valueText;
+    },
+font: {
+    font: "Optima, Segoe, Segoe UI, Candara, Calibri, Arial, sans-serif",
+    size: 15,
+    weight: 400
+    }
+},
+title: {
+    text: "10 Last Champions Played"
+    },
+legend: {
+    horizontalAlignment: 'center',
+    verticalAlignment: 'bottom'
+    }
+});
+});
+    */

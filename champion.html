@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!--memo, överväg färger. mediumseagreen + #FF5555 vs forestgreen + crimson-->
+    <link rel="shortcut icon" href="http://cdn.leagueoflegends.com/lolkit/1.1.5/resources/images/favicon.ico">
+
+    <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="bootstrap-3.1.1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap-3.1.1-dist/css/bootstrap-theme.css">
+    <!DOCTYPE HTML>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link href="bootstrap-3.1.1-dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <script type="text/javascript" src="chartsjs/Lib/js/jquery-2.0.3.min.js"></script>
+    <script type="text/javascript" src="chartsjs/Lib/js/globalize.min.js"></script>
+    <script type="text/javascript" src="ChartsJS/Lib/js/dx.chartjs.js"></script>
+    <script type="text/javascript" src="ChartsJS/Lib/js/knockout-3.0.0.js"></script>
+    <link rel="stylesheet" href="champion.css">
+
+
+    <link rel="stylesheet" type="text/css" href="startpage.css">
+
+    <title>LOLweb</title>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="champion.js"></script>
+</head>
+
+
+<body style="">
+<div id="container">
+    <div class="header">
+        <div class="rubrikStyle">Type summoner name</div>
+        <form onsubmit="getSummonerInfo()">
+            <input type="text" name="summonerName" placeholder="Summonername..."><br>
+        </form>
+
+        <p style="margin: 0 auto; padding: 0; width: 145px; margin-top: -15px; padding-bottom: 5px;">
+            <button type="button" style="margin-left: auto; margin-right: auto;" onclick="setServer('euw')" class="btn btn-default btn-sm">EUW</button>
+            <button type="button" style="margin-left: auto; margin-right: auto;" onclick="setServer('eune')" class="btn btn-default btn-sm">EUNE</button>
+            <button type="button" style="margin-left: auto; margin-right: auto;" onclick="setServer('na')" class="btn btn-default btn-sm">NA</button>
+        </p>
+    </div>
+    <div id="championHeaderImage"></div>
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="#ChampionHome" data-toggle="tab">Home</a></li>
+        <li><a href="#ChampionTips" data-toggle="tab">Tips</a></li>
+        <li><a href="#ChampionLore" data-toggle="tab">Lore</a></li>
+        <li><a href="#ChampionDetailed" data-toggle="tab">Detailed Info</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div class="tab-pane active" id="ChampionHome"></div>
+        <div class="tab-pane" id="ChampionTips"></div>
+        <div class="tab-pane" id="ChampionLore"></div>
+        <div class="tab-pane" id="ChampionDetailed"></div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap-3.1.1-dist/js/bootstrap.min.js"></script>
+    <!-- Left Header Stats -->
+
+    <div id="mainContent"></div>
+
+    <br><br><br><br>
+    <!-- Footer, not sticking to bottom
+        <footer>-->
+    <hr>
+    <div class="footer-content">
+        <div class="footer-copy-content">
+            <div id="summonerIdToShowMe" style="float: right"></div>
+            <div>By Axel Barkelius</div>
+            <div>This product is not endorsed, certified or otherwise approved in any way by Riot Games, Inc. or any of its affiliates.</div>
+
+        </div>
+    </div>
+
+    <br>
+
+    <!--  </footer>-->
+
+</div>
+</body>
+</html>
+
+
