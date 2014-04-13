@@ -7,12 +7,14 @@ $(function getSummonerInfo() {
         name = "barkelius";
     name = name.replace("+"," ");
     name = name.replace("+"," ");
-
     $.ajax({
-       url: 'http://prod.api.pvp.net/api/lol/' + window.summonerServer + '/v1.2/summoner/by-name/' + name + '?api_key=818fcfce-3cb5-49eb-a38d-8ee45d6e3e76',
+       url:'https://prod.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/' + name + '?api_key=818fcfce-3cb5-49eb-a38d-8ee45d6e3e76',
+        //'http://prod.api.pvp.net/api/lol/' + window.summonerServer + '/v1.4/summoner/by-name/' + name + '?api_key=818fcfce-3cb5-49eb-a38d-8ee45d6e3e76',
        dataType: 'json',
        success: function(data) {
-	   var id = data.id;
+       //document.getElementById('test').innerHTML = "https://prod.api.pvp.net/api/lol/euw/v1.4/summoner/by-name/" + name + "?api_key=818fcfce-3cb5-49eb-a38d-8ee45d6e3e76";
+	   var id = data[name].id;
+
        document.getElementById('summonerIdToShowMe').innerHTML = id;
         //----------ranked stats(lite)---------------------------------------
            $.ajax({
@@ -197,16 +199,16 @@ function extendedMatchHistory(stats, fellowPlayers, myTeamId, myChampionId){
 
     for(var i = 0; i < fellowPlayers.length; ++i){
         if(fellowPlayers[i].teamId == 100)
-            teamBlue += "<a href='champion.html#" + fellowPlayers[i].championId + "'><img class='matchHistoryExtendedChampion'  src='championImages/" + fellowPlayers[i].championId + ".png'></a>";
+            teamBlue += "<a href='champion.html?championId=" + fellowPlayers[i].championId + "'><img class='matchHistoryExtendedChampion'  src='championImages/" + fellowPlayers[i].championId + ".png'></a>";
             //teamBlue += fellowPlayers[i].championId + ", ";
         else if(fellowPlayers[i].teamId == 200)
-            teamPurple += "<a href='champion.html#" + fellowPlayers[i].championId + "'><img class='matchHistoryExtendedChampion'  src='championImages/" + fellowPlayers[i].championId + ".png'></a>";
+            teamPurple += "<a href='champion.html?championId=" + fellowPlayers[i].championId + "'><img class='matchHistoryExtendedChampion'  src='championImages/" + fellowPlayers[i].championId + ".png'></a>";
             //teamPurple += fellowPlayers[i].championId + ", ";
     }
     if(myTeamId == 100)
-        teamBlue += "<a href='champion.html#" + myChampionId + "' ><img class='matchHistoryExtendedChampion'  src='championImages/" + myChampionId + ".png'></a>";
+        teamBlue += "<a href='champion.html?championId=" + myChampionId + "' ><img class='matchHistoryExtendedChampion'  src='championImages/" + myChampionId + ".png'></a>";
     else if(myTeamId == 200)
-        teamPurple += "<a href='champion.html#" + myChampionId + "' ><img class='matchHistoryExtendedChampion'  src='championImages/" + myChampionId + ".png'></a>";
+        teamPurple += "<a href='champion.html?championId=" + myChampionId + "' ><img class='matchHistoryExtendedChampion'  src='championImages/" + myChampionId + ".png'></a>";
     var goldEarned = isUndefined(stats.goldEarned);
     var damageDealt = isUndefined(stats.totalDamageDealtToChampions);
     var damageTaken = isUndefined(stats.totalDamageTaken);
@@ -282,6 +284,12 @@ function matchHistoryGameMode(matchMode){
             break;
         case "NORMAL_3x3":
             rv = "Normal 3v3";
+            break;
+        case "CAP_5x5":
+            rv = "Normal 5v5"
+            break;3
+        case "URF":
+            rv = "URF"
             break;
         default:
             rv = "Error: Undefined gametype";

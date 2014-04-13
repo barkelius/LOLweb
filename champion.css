@@ -45,6 +45,28 @@ hr.myHr {
     border-color: #eeeeee;
     border-width: 1px;
 }
+
+span.spellAdvancedCost{
+
+    float: right;
+}
+span.spellName{
+    font-size: 15px;
+    font-style: italic;
+}
+
 span.color00DD33{
     color: #00DD33;
+}
+span.color99FF99{
+    color: #00B900;
+}
+span.colorFF9900{
+    color: #FF9900;
+}
+span.colorFF8C00{
+     color: #FF8C00;
+ }
+span.colorFF3300{
+    color: #FF3300;
 }

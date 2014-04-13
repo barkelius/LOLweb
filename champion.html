@@ -38,15 +38,10 @@
 <div id="container">
     <div class="header">
         <div class="rubrikStyle">Type summoner name</div>
-        <form onsubmit="getSummonerInfo()">
-            <input type="text" name="summonerName" placeholder="Summonername..."><br>
+        <form onsubmit="getChampionInfo()">
+            <input type="text" name="championId" placeholder="Champions ID..."><br>
         </form>
-
-        <p style="margin: 0 auto; padding: 0; width: 145px; margin-top: -15px; padding-bottom: 5px;">
-            <button type="button" style="margin-left: auto; margin-right: auto;" onclick="setServer('euw')" class="btn btn-default btn-sm">EUW</button>
-            <button type="button" style="margin-left: auto; margin-right: auto;" onclick="setServer('eune')" class="btn btn-default btn-sm">EUNE</button>
-            <button type="button" style="margin-left: auto; margin-right: auto;" onclick="setServer('na')" class="btn btn-default btn-sm">NA</button>
-        </p>
+        <a href="startpage.html"><img style="margin-top: -120px;" src="menuImages/lessArrow.jpg"></a>
     </div>
     <div id="championHeaderImage"></div>
     <!-- Nav tabs -->
